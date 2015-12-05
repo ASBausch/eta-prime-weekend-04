@@ -5,9 +5,11 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
+var mongo = require('./data/mongo.js');
 var index = require('./routes/index');
 var admin = require('./routes/admin');
 var users = require('./routes/users');
+var applications = require('./routes/applicant');
 
 var app = express();
 
@@ -26,6 +28,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', index);
 app.use('/admin', admin);
 app.use('/users', users);
+app.use('/applicant', applications);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -33,6 +36,7 @@ app.use(function(req, res, next) {
   err.status = 404;
   next(err);
 });
+
 
 // error handlers
 
@@ -56,6 +60,13 @@ app.use(function(err, req, res, next) {
     message: err.message,
     error: {}
   });
+});
+
+//mongo error handler /ab
+mongo.init(function(error) {
+  if(error) {
+    throw error;
+  }
 });
 
 
