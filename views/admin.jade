@@ -1,5 +1,65 @@
 extends layout
 
 block content
-
+        .row
+            .col-md-6
+             .container-fluid
+                p.lead.text-uppercase
+                    br
+                    | Find the right Rando talent. Search by Name, talents desired location, or talent listed skills.
+                form
+                    .form-group
+                        label(for='srhFrstName') First
+                        input#srhFrstName.form-control(type='text', placeholder='First')
+                    .form-group
+                        label(for='srhLstName') Last
+                        input#srhLstName.form-control(type='text', placeholder='Last')
+                    .form-group
+                        label(for='locDes') Location Available
+                        input#locDes.form-control(type='text', placeholder='Location Desired')
+                    .form-group
+                        label(for='skills') Skills Required
+                        input#skills.form-control(type='text', placeholder='Skills Desired')
+            .col-md-6
+                img.img-responsive(src='images/rdo.jpg', alt='Responsive image')
+            .col-md-12.tan
+            .col-md-6
+                .container-fluid
+                    table.table.table-striped.table-hover.table-responsive
+                        tr
+                            td First Name
+                            td Last Name
+                            td Location
+                            td Last Employer
+                            td Listed Skills
+                        tr
+                            td Todd
+                            td Smith
+                            td Louisville
+                            td Humana
+                            td Lots, Of, Skills
+                        tr
+                            td Todd
+                            td Smith
+                            td Louisville
+                            td Humana
+                            td Lots, Of, Skills
+                        tr
+                            td Todd
+                            td Smith
+                            td Louisville
+                            td Humana
+                            td Lots, Of, Skills
+                        tr
+                            td Todd
+                            td Smith
+                            td Louisville
+                            td Humana
+                            td Lots, Of, Skills
+                        tr
+                            td Todd
+                            td Smith
+                            td Louisville
+                            td Humana
+                            td Lots, Of, Skills
 
