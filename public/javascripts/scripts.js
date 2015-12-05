@@ -16,9 +16,9 @@ $(function () {
         // finally, make an ajax call, using the POST method, and send the data
         $.ajax({url: '/applicant',
             type: 'post',
-            data: data,
+            data: data
         }).done(function(data) {
-
+            console.log('i am here in script');
             console.log(data);
 
         });

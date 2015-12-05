@@ -25,6 +25,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+//routes added to admin, index, applicant
 app.use('/', index);
 app.use('/admin', admin);
 app.use('/users', users);
@@ -68,6 +69,13 @@ mongo.init(function(error) {
     throw error;
   }
 });
+
+//makes db accesable to router
+app.use(function(req,res,next){
+  req.db = db;
+  next();
+});
+
 
 
 module.exports = app;

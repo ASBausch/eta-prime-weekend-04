@@ -7,19 +7,23 @@ block content
                 p.lead.text-uppercase
                     br
                     | Find the right Rando talent. Search by Name, talents desired location, or talent listed skills.
-                form
+                form.search
                     .form-group
                         label(for='srhFrstName') First
-                        input#srhFrstName.form-control(type='text', placeholder='First')
+                        input#srhFrstName.form-control(type='text', name='firstName', placeholder='First')
+
                     .form-group
                         label(for='srhLstName') Last
-                        input#srhLstName.form-control(type='text', placeholder='Last')
+                        input#srhLstName.form-control(type='text', name='lastName', placeholder='Last')
+
                     .form-group
                         label(for='locDes') Location Available
-                        input#locDes.form-control(type='text', placeholder='Location Desired')
+                        input#locDes.form-control(type='text', name='locDesire', placeholder='Location Desired')
+
                     .form-group
                         label(for='skills') Skills Required
-                        input#skills.form-control(type='text', placeholder='Skills Desired')
+                        input#skills.form-control(type='text', name='skillDesire', placeholder='Skills Desired')
+                        button.btn.btn-default.searchSkills(type='submit') Submit
             .col-md-6
                 img.img-responsive(src='images/rdo.jpg', alt='Responsive image')
             .col-md-12.tan
