@@ -17,12 +17,9 @@ $(function () {
         $.ajax({url: '/applicant',
             type: 'post',
             data: data
-        }).done(function(data) {
-            console.log('i am here in script');
-            console.log(data);
+        }).done(function() {
 
         });
-console.log(data);
         // reset the form
         $(this)[0].reset();
     });
