@@ -31,39 +31,14 @@ block content
                 .container-fluid
                     table.table.table-striped.table-hover.table-responsive
                         tr
-                            td First Name
-                            td Last Name
-                            td Location
-                            td Last Employer
-                            td Listed Skills
+                            th Full Name
+                            th Location
+                            th Last Employers
+                            th Listed Skills
                         tr
-                            td Todd
-                            td Smith
-                            td Louisville
-                            td Humana
-                            td Lots, Of, Skills
-                        tr
-                            td Todd
-                            td Smith
-                            td Louisville
-                            td Humana
-                            td Lots, Of, Skills
-                        tr
-                            td Todd
-                            td Smith
-                            td Louisville
-                            td Humana
-                            td Lots, Of, Skills
-                        tr
-                            td Todd
-                            td Smith
-                            td Louisville
-                            td Humana
-                            td Lots, Of, Skills
-                        tr
-                            td Todd
-                            td Smith
-                            td Louisville
-                            td Humana
-                            td Lots, Of, Skills
+                            td db.applications.find({},{firstName:5, lastName:5})
+                            td db.applications.find({},{desiredCity:5, desiredState:5})
+                            td db.applications.find({},{employer1:5, employer2:5, employer2:5})
+                            td db.applications.find({},{skills1:5, skills2:5, skills2:5})
+
 
