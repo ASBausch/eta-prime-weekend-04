@@ -38,6 +38,19 @@ app.use(function(req, res, next) {
   next(err);
 });
 
+//mongo error handler /ab
+mongo.init(function(error) {
+  if(error) {
+    throw error;
+  }
+});
+
+//makes db accesable to router
+app.use(function(req,res,next){
+  req.db = db;
+  next();
+});
+
 
 // error handlers
 
@@ -63,18 +76,7 @@ app.use(function(err, req, res, next) {
   });
 });
 
-//mongo error handler /ab
-mongo.init(function(error) {
-  if(error) {
-    throw error;
-  }
-});
 
-//makes db accesable to router
-app.use(function(req,res,next){
-  req.db = db;
-  next();
-});
 
 
 

@@ -7,16 +7,13 @@ var mongo = require('../data/mongo');
 
 /*here I need to send the data to the database*/
 router.post('/', function(req, res) {
+    var collection = mongo.applications;
 
-    var collection = mongo.getCollection('applications');
-    console.log(collection);
-
-    //collection.insert(req.body, function (err) {
-    //    res.send(
-    //    err === null ? {msg: ''} : {msg: err}
-    //);
-
-    //})
+    collection.insert(req.body, function (err) {
+       res.send(
+           err === null ? {msg: ''} : {msg: err}
+        );
+    })
 });
 
 module.exports = router;
