@@ -8,6 +8,7 @@ module.exports.init = function(callback) {
     var db = new mongodb.Db('rando', server);
     db.open(function(error, db) {
         //export the db
+        //these exports act like global variables to a degree
         module.exports.db = db;
         module.exports.applications = db.collection('applications');
         callback(error);
