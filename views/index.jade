@@ -27,10 +27,10 @@ block content
           form.application
             .form-group
               label(for='firstName') First Name
-              input#fstNameField.form-control(type='text', name='firstName', placeholder='First Name')
+              input#fstNameField.form-control(type='text', name='firstName', placeholder='First Name' required)
             .form-group
               label(for='lastName') Last Name
-              input#lastNameField.form-control(type='text', name='lastName', placeholder='Last Name')
+              input#lastNameField.form-control(type='text', name='lastName', placeholder='Last Name' required)
             .form-group
               label(for='desiredPos') Desired Position
               input#desiredJob.form-control(type='text', name='desiredPos', placeholder='Desired Job')
@@ -45,10 +45,10 @@ block content
                   input#optionsRadios2(type='radio', name='typeOf', value='on location')
                   |           On Location
               label(for='desiredLoc') Desired Location
-              input#desiredLoc.form-control(type='text', name='desiredLoc', placeholder='ie: Minneapolis, MN')
+              input#desiredLoc.form-control(type='text', name='desiredLoc', placeholder='ie: Minneapolis, MN' required)
               .form-group
                 label(for='skills') Skills
-                input#skills1.form-control(type='text', name='skills', placeholder='ie: sales, filing, web design')
+                input#skills1.form-control(type='text', name='skills', placeholder='ie: sales, filing, web design' required)
             .form-group
               p.help-block.darkText Please enter your employment history, up to three positions.
             .form-group
