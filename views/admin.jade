@@ -29,16 +29,17 @@ block content
             .col-md-12.tan
             .col-md-6
                 .container-fluid
-                    table.table.table-striped.table-hover.table-responsive
+                    table
+                      tr
+                        th Full Name
+                        th Location
+                        th Last Employee
+                        th Listed Skills
+                    each val in data
                         tr
-                            th Full Name
-                            th Location
-                            th Last Employers
-                            th Listed Skills
-                        tr
-                            td #{data}db.applications.find({},{firstName:5, lastName:5})
-                            td db.applications.find({},{desiredCity:5, desiredState:5})
-                            td db.applications.find({},{employer1:5, employer2:5, employer2:5})
-                            td db.applications.find({},{skills1:5, skills2:5, skills2:5})
+                        td= val.firstName + " " + val.lastName
+                        td= val.locationDesired
+                        td= val.employer1 + " ," + val.employer2 + " ," + val.employer3
+                        td= val.skills1 + " ," + val.skills2 + " ," + val.skills3
 
 
