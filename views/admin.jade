@@ -18,15 +18,17 @@ block content
 
                     .form-group
                         label(for='desiredLoc') Requested Location
-                        input#locDes.form-control(type='text', name='desiredLoc', placeholder='Location')
+                        input#locDes.form-control(type='text', name='desiredLoc', placeholder='ie: Eagan, MN')
 
                     .form-group
                         label(for='skills') Skills
                         input#skills.form-control(type='text', name='skills', placeholder='Skills')
+                        br
                         button.btn.btn-default.searchSkills(type='submit') Submit
             .col-md-6
                 img.img-responsive(src='/images/rdo.jpg', alt='Responsive image')
             .col-md-12.tan
+                br
             .col-md-12
                 .container-fluid
                     table.table.table-bordered.table-striped.table-hover.table-responsive
