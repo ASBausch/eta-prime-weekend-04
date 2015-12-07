@@ -29,17 +29,17 @@ block content
             .col-md-12.tan
             .col-md-6
                 .container-fluid
-                    table
+                    table.table.table-bordered
                       tr
                         th Full Name
                         th Location
                         th Last Employee
                         th Listed Skills
-                    each val in data
-                        tr
-                        td= val.firstName + " " + val.lastName
-                        td= val.locationDesired
-                        td= val.employer1 + " ," + val.employer2 + " ," + val.employer3
-                        td= val.skills1 + " ," + val.skills2 + " ," + val.skills3
+                          each val in data
+                            tr
+                            td= val.firstName + " " + val.lastName
+                            td= val.desiredCity + " " + val.desiredState
+                            td= val.employer1 + " ," + val.employer2 + " ," + val.employer3
+                            td= val.skills1 + " ," + val.skills2 + " ," + val.skills3
 
 
