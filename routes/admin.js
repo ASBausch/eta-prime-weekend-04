@@ -15,11 +15,11 @@ router.get('/', function(req, res) {
 router.post('/search', function(req, res) {
     var firstName = (req.body.firstName);
     var lastName = (req.body.lastName);
-    var locDesired = (req.body.desiredCity);
-    var skillDesire = (req.body.skills1);
+    var desiredLoc = (req.body.desiredLoc);
+    var skills = (req.body.skills);
 
     var results = mongo.applications.find({$or: [ {"firstName": firstName}, {"lastName": lastName},
-        {"desiredCity": locDesired}, {"skills1": skillDesire}] })
+        {"desiredLoc": desiredLoc}, {"skills": skills}] })
         .toArray(function(err, array) {
 
         res.render('admin.jade', {data: array});

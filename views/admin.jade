@@ -17,11 +17,11 @@ block content
                         input#srhLstName.form-control(type='text', name='lastName', placeholder='Last')
 
                     .form-group
-                        label(for='locDes') Location Available
+                        label(for='locDes') Location
                         input#locDes.form-control(type='text', name='locDesire', placeholder='Location Desired')
 
                     .form-group
-                        label(for='skills') Skills Required
+                        label(for='skills') Skills
                         input#skills.form-control(type='text', name='skillDesire', placeholder='Skills Desired')
                         button.btn.btn-default.searchSkills(type='submit') Submit
             .col-md-6
@@ -33,13 +33,13 @@ block content
                       tr
                         th Full Name
                         th Location
-                        th Last Employee
+                        th Last Employer
                         th Listed Skills
                           each val in data
                             tr
                             td= val.firstName + " " + val.lastName
-                            td= val.desiredCity + " " + val.desiredState
-                            td= val.employer1 + " ," + val.employer2 + " ," + val.employer3
-                            td= val.skills1 + " ," + val.skills2 + " ," + val.skills3
+                            td= val.desiredLoc
+                            td= val.employer1 + ", " + val.employer2 + ", " + val.employer3
+                            td= val.skills
 
 

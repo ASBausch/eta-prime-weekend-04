@@ -26,28 +26,29 @@ block content
             | Work with Rando
           form.application
             .form-group
-              label(for='fstName') First Name
+              label(for='firstName') First Name
               input#fstNameField.form-control(type='text', name='firstName', placeholder='First Name')
             .form-group
-              label(for='lstName') Last Name
+              label(for='lastName') Last Name
               input#lastNameField.form-control(type='text', name='lastName', placeholder='Last Name')
             .form-group
-              label(for='desiredJob') Desired Job
-              input#desiredJob.form-control(type='text', name='desiredJob', placeholder='Desired Job')
+              label(for='desiredPos') Desired Position
+              input#desiredJob.form-control(type='text', name='desiredPos', placeholder='Desired Job')
             .form-group
-              label(for='desiredLoc') Desired Location
+              label(for='typeOf') Type of Work
               .radio
                 label
-                  input#optionsRadios1(type='radio', name='radio', value='remote')
+                  input#optionsRadios1(type='radio', name='typeOf', value='remote')
                   |           Remote
               .radio
                 label
-                  input#optionsRadios2(type='radio', name='radio', value='specific')
-                  |           Specific
-              label(for='desiredJob') Desired City
-              input#desiredLoc.form-control(type='text', name='desiredCity', placeholder='Desired City')
-              label(for='desiredJob') Desired State
-              input#desiredLoc.form-control(type='text', name='desiredState', placeholder='Desired State')
+                  input#optionsRadios2(type='radio', name='typeOf', value='on location')
+                  |           On Location
+              label(for='desiredLoc') Desired Location
+              input#desiredLoc.form-control(type='text', name='desiredLoc', placeholder='ie: Minneapolis, MN')
+              .form-group
+                label(for='skills') Skills
+                input#skills1.form-control(type='text', name='skills', placeholder='ie: sales, filing, web design')
             .form-group
               p.help-block.darkText Please enter your employment history, up to three positions.
             .form-group
@@ -68,9 +69,6 @@ block content
               label(for='duties') Duties
               input#duties1.form-control(type='text', name='duties1', placeholder='Duties')
             .form-group
-              label(for='skills') Skills
-              input#skills1.form-control(type='text', name='skills1', placeholder='Skills')
-            .form-group
               p.help-block.darkText Position Two
             .form-group
               label(for='title') Title
@@ -88,9 +86,6 @@ block content
               label(for='duties') Duties
               input#duties2.form-control(type='text', name='duties2', placeholder='Duties')
             .form-group
-              label(for='skills') Skills
-              input#skills2.form-control(type='text', name='skills2', placeholder='Skills')
-            .form-group
               p.help-block.darkText Position Three
             .form-group
               label(for='title') Title
@@ -107,9 +102,6 @@ block content
             .form-group
               label(for='duties') Duties
               input#duties3.form-control(type='text', name='duties3', placeholder='Duties')
-            .form-group
-              label(for='skills') Skills
-              input#skills3.form-control(type='text', name='skills3', placeholder='Skills')
             button.btn.btn-default(type='submit') Submit
           .row
             .col-md-12
