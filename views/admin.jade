@@ -7,7 +7,7 @@ block content
                 p.lead.text-uppercase
                     br
                     | Find the right Rando talent. Search by Name, talents desired location, or talent listed skills.
-                form.search
+                form(method='post', action='/admin/search').search
                     .form-group
                         label(for='srhFrstName') First
                         input#srhFrstName.form-control(type='text', name='firstName', placeholder='First')
@@ -25,11 +25,11 @@ block content
                         input#skills.form-control(type='text', name='skillDesire', placeholder='Skills Desired')
                         button.btn.btn-default.searchSkills(type='submit') Submit
             .col-md-6
-                img.img-responsive(src='images/rdo.jpg', alt='Responsive image')
+                img.img-responsive(src='/images/rdo.jpg', alt='Responsive image')
             .col-md-12.tan
-            .col-md-6
+            .col-md-12
                 .container-fluid
-                    table.table.table-bordered
+                    table.table.table-bordered.table-striped.table-hover.table-responsive
                       tr
                         th Full Name
                         th Location
